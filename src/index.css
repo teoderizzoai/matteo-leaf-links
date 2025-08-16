@@ -8,7 +8,7 @@
 
 @layer base {
   :root {
-    /* Matteo's sophisticated dark blue-gray color palette */
+    /* Matteo's new sophisticated dark blue-gray color palette */
     --background: 220 13% 16%; /* #222831 - Dark blue-gray */
     --foreground: 0 0% 93%; /* #EEEEEE - Off-white */
     
@@ -30,8 +30,8 @@
     --muted: 220 13% 22%; /* #393E46 - Medium blue-gray */
     --muted-foreground: 0 0% 70%; /* Light gray */
     
-    /* Accent using teal blue for special highlights */
-    --accent: 183 100% 35%; /* #00ADB5 - Teal blue */
+    /* Accent using muted colors for subtle highlights */
+    --accent: 220 13% 22%; /* #393E46 - Medium blue-gray */
     --accent-foreground: 0 0% 93%; /* #EEEEEE - Off-white */
     
     --destructive: 0 84.2% 60.2%;
@@ -49,7 +49,7 @@
     --sidebar-foreground: 0 0% 93%; /* #EEEEEE - Off-white */
     --sidebar-primary: 0 0% 95%; /* #F2F2F2 - Whitish */
     --sidebar-primary-foreground: 0 0% 8%; /* #141414 - Very dark */
-    --sidebar-accent: 183 100% 35%; /* #00ADB5 - Teal blue */
+    --sidebar-accent: 220 13% 22%; /* #393E46 - Medium blue-gray */
     --sidebar-accent-foreground: 0 0% 93%; /* #EEEEEE - Off-white */
     --sidebar-border: 220 13% 22%; /* #393E46 - Medium blue-gray */
     --sidebar-ring: 0 0% 95%; /* #F2F2F2 - Whitish */
@@ -98,6 +98,10 @@
     animation: float 6s ease-in-out infinite;
   }
   
+  .animate-float-slow {
+    animation: float 7s ease-in-out infinite !important; /* Floating animation */
+  }
+  
   /* Hover effects */
   .link-card {
     @apply transition-all duration-300 ease-out;
@@ -110,15 +114,14 @@
 }
 
 @layer utilities {
-  /* Background pattern utility using new color palette */
+  /* Background pattern utility */
   .bg-leaf-pattern {
     background-image: url('/leaf-pattern.svg');
     background-repeat: repeat;
     background-size: 150px 150px;
     background-position: 0 0;
-    opacity: 0.3; /* Increased opacity for better visibility with new palette */
+    opacity: 0.3; /* Updated to 30% opacity as specified */
     mix-blend-mode: multiply;
-    filter: brightness(0.8) contrast(1.2); /* Enhanced visibility */
   }
   
   /* Additional watermark leaf pattern */
@@ -127,7 +130,7 @@
     background-repeat: repeat;
     background-size: 300px 300px;
     background-position: center;
-    opacity: 0.15; /* Increased opacity for new palette */
+    opacity: 0.04;
     mix-blend-mode: overlay;
     position: fixed;
     top: 0;
@@ -136,61 +139,40 @@
     height: 100%;
     pointer-events: none;
     z-index: 1;
-    filter: brightness(0.9) contrast(1.1); /* Enhanced visibility */
   }
   
-  /* New shadow utilities for the sophisticated color palette */
+  /* New shadow and glow effects for the updated color palette */
   .shadow-glow {
-    box-shadow: 0 0 40px hsl(0 0% 95% / 0.2); /* White glow with 20% opacity */
+    box-shadow: 0 0 40px rgba(242, 242, 242, 0.2); /* White glow with 20% opacity */
   }
   
   .shadow-card {
-    box-shadow: 0 8px 32px hsl(220 13% 16% / 0.4); /* Dark shadow with 40% opacity */
+    box-shadow: 0 8px 32px rgba(34, 40, 49, 0.4); /* Dark shadow with 40% opacity */
   }
   
-  .shadow-glow-hover:hover {
-    box-shadow: 0 0 50px hsl(0 0% 95% / 0.3); /* Enhanced glow on hover */
+  .shadow-glow-hover {
+    box-shadow: 0 0 60px rgba(242, 242, 242, 0.3); /* Enhanced white glow on hover */
   }
   
-  /* Portfolio-specific color utilities */
-  .bg-section {
-    background-color: hsl(220 13% 22%); /* #393E46 - Medium blue-gray */
-  }
-  
-  .bg-project-card {
-    background-color: hsl(220 13% 22%); /* #393E46 - Medium blue-gray */
-  }
-  
-  .bg-skill-tag {
-    background-color: hsl(220 13% 22%); /* #393E46 - Medium blue-gray */
-  }
-  
+  /* Additional color utilities for the new palette */
   .text-accent-teal {
-    color: hsl(183 100% 35%); /* #00ADB5 - Teal blue */
+    color: hsl(183, 100%, 35%); /* #00ADB5 - Teal blue */
+  }
+  
+  .bg-accent-teal {
+    background-color: hsl(183, 100%, 35%); /* #00ADB5 - Teal blue */
   }
   
   .border-accent-teal {
-    border-color: hsl(183 100% 35%); /* #00ADB5 - Teal blue */
+    border-color: hsl(183, 100%, 35%); /* #00ADB5 - Teal blue */
   }
   
-  /* Radial gradient utilities for the new design */
-  .bg-gradient-radial {
-    background: radial-gradient(circle, var(--tw-gradient-stops));
+  .hover\:bg-accent-teal:hover {
+    background-color: hsl(183, 100%, 35%); /* #00ADB5 - Teal blue */
   }
   
-  .from-accent\/5 {
-    --tw-gradient-from: hsl(183 100% 35% / 0.05);
-    --tw-gradient-to: hsl(183 100% 35% / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
-  
-  .via-transparent {
-    --tw-gradient-to: transparent;
-    --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to);
-  }
-  
-  .to-transparent {
-    --tw-gradient-to: transparent;
+  .hover\:text-accent-teal:hover {
+    color: hsl(183, 100%, 35%); /* #00ADB5 - Teal blue */
   }
 }
 

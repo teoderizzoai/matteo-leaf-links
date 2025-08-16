@@ -1,11 +1,12 @@
-import profileImage from "@/assets/profile-placeholder.jpg";
+// Using the profile photo from the public directory
+const profileImage = "/profile-photo.png";
 
 export const ProfileSection = () => {
   return (
     <div className="flex flex-col items-center text-center space-y-6 animate-fade-in">
       {/* Profile Image */}
       <div className="relative">
-        <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-border/20 shadow-glow animate-float">
+        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-border/20 shadow-card hover:shadow-glow transition-all duration-300 animate-float-slow">
           <img
             src={profileImage}
             alt="Matteo De Rizzo"
@@ -24,8 +25,8 @@ export const ProfileSection = () => {
         </p>
       </div>
 
-      {/* Subtle divider using new accent color */}
-      <div className="w-16 h-px bg-accent/40 mt-8"></div>
+      {/* Subtle divider */}
+      <div className="w-16 h-px bg-border/30 mt-8"></div>
     </div>
   );
 };
