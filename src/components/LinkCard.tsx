@@ -13,11 +13,11 @@ export const LinkCard = ({ title, description, href, icon }: LinkCardProps) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="link-card elegant-border group block p-6 rounded-lg bg-card hover:bg-accent/50 transition-all duration-300"
+      className="link-card elegant-border group block p-6 rounded-lg bg-secondary hover:bg-accent transition-all duration-300"
     >
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-3">
-          <div className="p-2 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors duration-300">
+          <div className="p-2 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
             {icon}
           </div>
           <h3 className="font-display text-lg font-medium text-foreground">

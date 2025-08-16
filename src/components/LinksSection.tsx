@@ -6,25 +6,25 @@ export const LinksSection = () => {
     {
       title: "GitHub",
       description: "Explore my repositories and open source contributions",
-      href: "https://github.com",
+      href: "https://github.com/teoderizzoai",
       icon: <Github className="w-5 h-5 text-foreground" />
     },
     {
       title: "LinkedIn", 
       description: "Connect with me professionally and view my experience",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/matteo-de-rizzo/",
       icon: <Linkedin className="w-5 h-5 text-foreground" />
     },
     {
       title: "Portfolio",
       description: "Discover my projects and technical achievements",
-      href: "#",
+      href: "https://teo-ai-portfolio.lovable.app/",
       icon: <User className="w-5 h-5 text-foreground" />
     },
     {
-      title: "Resume",
+      title: "CV",
       description: "Download my latest CV and professional background",
-      href: "#",
+      href: "/Matteo De Rizzo CV.pdf",
       icon: <FileText className="w-5 h-5 text-foreground" />
     }
   ];

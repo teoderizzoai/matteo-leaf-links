@@ -1,13 +1,11 @@
-import profileImage from "@/assets/profile-placeholder.jpg";
-
 export const ProfileSection = () => {
   return (
     <div className="flex flex-col items-center text-center space-y-6 animate-fade-in">
       {/* Profile Image */}
       <div className="relative">
-        <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-border/20 shadow-lg animate-float">
+        <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-secondary shadow-lg animate-float">
           <img
-            src={profileImage}
+            src="/profile-photo.png"
             alt="Matteo De Rizzo"
             className="w-full h-full object-cover"
           />
