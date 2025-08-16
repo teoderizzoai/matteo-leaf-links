@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Download } from "lucide-react";
 
 interface LinkCardProps {
   title: string;
@@ -8,11 +8,16 @@ interface LinkCardProps {
 }
 
 export const LinkCard = ({ title, description, href, icon }: LinkCardProps) => {
+  // Check if this is a PDF link to handle it appropriately
+  const isPdf = href.toLowerCase().includes('.pdf');
+  
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      // Add download attribute for PDF files to encourage downloading
+      {...(isPdf && { download: title.replace(/\s+/g, '-').toLowerCase() + '.pdf' })}
       className="link-card elegant-border group block p-6 rounded-lg bg-card hover:bg-accent/50 transition-all duration-300"
     >
       <div className="flex items-center justify-between mb-3">
@@ -24,7 +29,11 @@ export const LinkCard = ({ title, description, href, icon }: LinkCardProps) => {
             {title}
           </h3>
         </div>
-        <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
+        {isPdf ? (
+          <Download className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
+        ) : (
+          <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
+        )}
       </div>
       <p className="text-muted-foreground text-sm leading-relaxed">
         {description}

@@ -22,9 +22,9 @@ export const LinksSection = () => {
       icon: <User className="w-5 h-5 text-foreground" />
     },
     {
-      title: "Resume",
+      title: "Download CV",
       description: "Download my latest CV and professional background",
-      href: "#",
+      href: "/Matteo De Rizzo CV.pdf",
       icon: <FileText className="w-5 h-5 text-foreground" />
     }
   ];
