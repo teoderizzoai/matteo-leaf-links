@@ -18,7 +18,7 @@ export const LinkCard = ({ title, description, href, icon }: LinkCardProps) => {
       rel="noopener noreferrer"
       // Add download attribute for PDF files to encourage downloading
       {...(isPdf && { download: title.replace(/\s+/g, '-').toLowerCase() + '.pdf' })}
-      className="link-card elegant-border group block p-6 rounded-lg bg-card hover:bg-accent/50 transition-all duration-300"
+      className="link-card elegant-border group block p-6 rounded-lg bg-card hover:bg-accent/50 transition-all duration-300 shadow-card hover:shadow-glow-hover"
     >
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-3">

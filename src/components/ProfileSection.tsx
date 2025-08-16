@@ -5,7 +5,7 @@ export const ProfileSection = () => {
     <div className="flex flex-col items-center text-center space-y-6 animate-fade-in">
       {/* Profile Image */}
       <div className="relative">
-        <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-border/20 shadow-lg animate-float">
+        <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-border/20 shadow-glow animate-float">
           <img
             src={profileImage}
             alt="Matteo De Rizzo"
@@ -24,8 +24,8 @@ export const ProfileSection = () => {
         </p>
       </div>
 
-      {/* Subtle divider */}
-      <div className="w-16 h-px bg-border/30 mt-8"></div>
+      {/* Subtle divider using new accent color */}
+      <div className="w-16 h-px bg-accent/40 mt-8"></div>
     </div>
   );
 };
