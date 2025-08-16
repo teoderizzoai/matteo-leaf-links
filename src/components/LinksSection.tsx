@@ -18,7 +18,7 @@ export const LinksSection = () => {
     {
       title: "Portfolio",
       description: "Discover my projects and technical achievements",
-      href: "#",
+      href: "https://teo-ai-portfolio.lovable.app/",
       icon: <User className="w-5 h-5 text-foreground" />
     },
     {
