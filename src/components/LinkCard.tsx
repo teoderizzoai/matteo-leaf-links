@@ -17,12 +17,12 @@ export const LinkCard = ({ title, description, href, icon }: LinkCardProps) => {
       target="_blank"
       rel="noopener noreferrer"
       // Add download attribute for PDF files to encourage downloading
-      {...(isPdf && { download: title.replace(/\s+/g, '-').toLowerCase() + '.pdf' })}
-      className="link-card elegant-border group block p-6 rounded-lg bg-card hover:bg-accent/50 transition-all duration-300 shadow-card hover:shadow-glow-hover hover:border-accent-teal/40"
+      {...(isPdf && { download: "Matteo De Rizzo CV.pdf" })}
+      className="link-card elegant-border group block p-6 rounded-lg bg-card hover:bg-accent/50 transition-all duration-300 shadow-card hover:shadow-glow-hover"
     >
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-3">
-          <div className="p-2 rounded-full bg-primary/5 group-hover:bg-accent-teal/20 transition-colors duration-300">
+          <div className="p-2 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors duration-300">
             {icon}
           </div>
           <h3 className="font-display text-lg font-medium text-foreground">

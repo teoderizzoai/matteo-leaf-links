@@ -154,26 +154,7 @@
     box-shadow: 0 0 60px rgba(242, 242, 242, 0.3); /* Enhanced white glow on hover */
   }
   
-  /* Additional color utilities for the new palette */
-  .text-accent-teal {
-    color: hsl(183, 100%, 35%); /* #00ADB5 - Teal blue */
-  }
-  
-  .bg-accent-teal {
-    background-color: hsl(183, 100%, 35%); /* #00ADB5 - Teal blue */
-  }
-  
-  .border-accent-teal {
-    border-color: hsl(183, 100%, 35%); /* #00ADB5 - Teal blue */
-  }
-  
-  .hover\:bg-accent-teal:hover {
-    background-color: hsl(183, 100%, 35%); /* #00ADB5 - Teal blue */
-  }
-  
-  .hover\:text-accent-teal:hover {
-    color: hsl(183, 100%, 35%); /* #00ADB5 - Teal blue */
-  }
+  /* Color utilities for the updated palette */
 }
 
 @keyframes fadeIn {
