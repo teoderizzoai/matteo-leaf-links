@@ -7,7 +7,7 @@ const Index = () => {
       {/* Black leaves background image at the top */}
       <div className="absolute top-0 left-0 w-full h-64 bg-cover bg-center bg-no-repeat overflow-hidden" 
            style={{ 
-             backgroundImage: 'url(/black%20leaves.jpeg)',
+             backgroundImage: 'url("/black leaves.jpeg")',
              backgroundPosition: 'center top',
              filter: 'blur(2px)'
            }}>
