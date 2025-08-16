@@ -6,13 +6,13 @@ export const LinksSection = () => {
     {
       title: "GitHub",
       description: "Explore my repositories and open source contributions",
-      href: "https://github.com",
+      href: "https://github.com/teoderizzoai",
       icon: <Github className="w-5 h-5 text-foreground" />
     },
     {
       title: "LinkedIn", 
       description: "Connect with me professionally and view my experience",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/matteo-de-rizzo",
       icon: <Linkedin className="w-5 h-5 text-foreground" />
     },
     {
