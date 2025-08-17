@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/matteo-leaf-links/' : '/', // Replace 'your-repo-name' with your actual repository name
+  base: mode === 'production' ? './' : '/', // Use relative paths for main branch deployment
   server: {
     host: "::",
     port: 8080,
