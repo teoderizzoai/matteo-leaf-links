@@ -4,6 +4,7 @@
 // This is necessary because GitHub Pages only serves static files
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Portfolio from "./pages/Portfolio";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
@@ -11,6 +12,9 @@ const App = () => (
     <Routes>
       {/* Main landing page route */}
       <Route path="/" element={<Index />} />
+      
+      {/* Portfolio route */}
+      <Route path="/portfolio" element={<Portfolio />} />
       
       {/* Catch-all route for 404 errors - must be last */}
       <Route path="*" element={<NotFound />} />
