@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Matteo De Rizzo</title>
+    <script>
+        // GitHub Pages 404 redirect script
+        // This handles cases where users visit a route that doesn't exist
+        // It redirects them to the main page where React Router can take over
+        
+        // Get the current pathname
+        const path = window.location.pathname;
+        
+        // If we're on GitHub Pages and the path doesn't end with .html
+        if (path.includes('/matteo-leaf-links/') && !path.endsWith('.html')) {
+            // Redirect to the main page
+            window.location.href = '/matteo-leaf-links/';
+        } else if (!path.includes('/matteo-leaf-links/') && !path.endsWith('.html')) {
+            // For other hosts or root domain
+            window.location.href = '/';
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>Page Not Found</h1>
+        <p>Redirecting you to the main page...</p>
+        <p>If you're not redirected automatically, <a href="/">click here</a>.</p>
+    </div>
+</body>
+</html>
