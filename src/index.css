@@ -114,9 +114,9 @@
 }
 
 @layer utilities {
-  /* Background pattern utility */
+  /* Background pattern utility - using relative path for base path compatibility */
   .bg-leaf-pattern {
-    background-image: url('/leaf-pattern.svg');
+    background-image: url('./leaf-pattern.svg');
     background-repeat: repeat;
     background-size: 150px 150px;
     background-position: 0 0;
@@ -124,9 +124,9 @@
     mix-blend-mode: multiply;
   }
   
-  /* Additional watermark leaf pattern */
+  /* Additional watermark leaf pattern - using relative path for base path compatibility */
   .bg-leaf-watermark {
-    background-image: url('/leaf-pattern.svg');
+    background-image: url('./leaf-pattern.svg');
     background-repeat: repeat;
     background-size: 300px 300px;
     background-position: center;

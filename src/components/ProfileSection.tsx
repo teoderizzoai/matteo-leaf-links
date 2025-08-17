@@ -1,7 +1,9 @@
-// Using the profile photo from the public directory
-const profileImage = "/profile-photo.png";
-
-export const ProfileSection = () => {
+// Using the profile photo from the public directory with dynamic base URL for production compatibility
+const ProfileSection = () => {
+  // Get the base URL from Vite environment for proper asset loading
+  const baseUrl = import.meta.env.BASE_URL;
+  const profileImage = `${baseUrl}profile-photo.png`;
+  
   return (
     <div className="flex flex-col items-center text-center space-y-6 animate-fade-in">
       {/* Profile Image */}
@@ -30,3 +32,5 @@ export const ProfileSection = () => {
     </div>
   );
 };
+
+export { ProfileSection };
