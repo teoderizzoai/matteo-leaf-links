@@ -1,3 +1,4 @@
+// App component - Main application wrapper with routing
 // Using HashRouter instead of BrowserRouter for GitHub Pages compatibility
 // HashRouter uses URL hashes (#) which don't require server-side routing support
 // This is necessary because GitHub Pages only serves static files
@@ -6,11 +7,12 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
-  // Simplified App component to test basic routing
   <HashRouter>
     <Routes>
+      {/* Main landing page route */}
       <Route path="/" element={<Index />} />
-      {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+      
+      {/* Catch-all route for 404 errors - must be last */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   </HashRouter>
