@@ -32,16 +32,6 @@ const ProfileSection = () => {
           AI & Data Science Enthusiast
         </p>
       </div>
-
-      {/* Description */}
-      <div className="max-w-2xl">
-        {/* Professional summary with elegant typography and spacing */}
-        <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-inter">
-          Passionate about artificial intelligence, machine learning, and data science. 
-          Exploring the intersection of technology and innovation to solve complex problems 
-          and create meaningful impact.
-        </p>
-      </div>
     </div>
   );
 };
