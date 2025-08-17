@@ -23,7 +23,7 @@ const ProfileSection = () => {
       {/* Name and Title */}
       <div className="space-y-3">
         {/* Main heading with elegant typography */}
-        <h1 className="text-4xl md:text-5xl font-playfair font-semibold text-red-500 tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-playfair font-semibold text-foreground tracking-tight">
           Matteo De Rizzo
         </h1>
         
